@@ -1,46 +1,59 @@
 # FRONT-END
 
-1. Claims Rewards logged correctly previously (Sucess case)
-1.1 Logged in the page with correct user/password
-1.2 Click on claim rewards
-1.3 User can see the section "Your history" where it is the new reward and the correct history list the (last 8 rewards in chronological order).
+**Feature:** Claim reward  
+  As a user  
+  I want to claim a reward  
 
-2. Claims Rewards logging after the logging (Sucess case)
-2.1 Click on claim rewards (without logged)
-2.2 Show the login page.
-2.3 Enter a correct user/password
-2.4 User can see the section "Your history" where it is the new reward and the correct history list the (last 8 rewards in chronological order).
+**Scenario 1:** Claimed reward logged previously  
+**Given** the user previously logged with the correct 'user' 'password'  
+**And** the user is on the page where can get a reward  
+**When** the user claim a reward  
+**Then** The user can see the section "Your history" where there is a new reward in the correct order  
 
-3. Claims Rewards logging fails (Error case)
-3.1 Enter to the login section page 
-3.2 Show the login page
-3.3 Enter user/password wrong
-3.4 Show error login
+**Scenario 2:** Claimed reward without logged
+**Given** the user is in the page where can claim a reward  
+**And** the user is not logged  
+**When** the user claim a reward  
+**Then** The user can see the login page  
+**And** insert a correct 'user' 'password'  
+**And** the user can see the history list  
+**And** the reward is in the list  
 
-4. Claims reward fails not get the new reward (Error case)
-4.1 Logged in the page with correct user/password
-4.2 Click on claim rewards
-4.3 Some internal error happened and show error message in the page.
-4.4 Claim the reward again.
-4.5 Show the history section without your reward in the list.
+**Scenario 3:** Claimed reward with wrong credentials    
+**Given** the user is in the page where can claim a reward  
+**And** the user is not logged  
+**When** the user claim a reward  
+**And** The user can see the login page  
+**And** insert an incorrect 'user' 'password'  
+**Then** the user can see the login page error  
 
-5. Claims reward in incorrect order (Error case)
-5.1 Logged in the page with correct user/password
-5.2 Click on claim rewards
-5.3 Claim the reward.
-5.4 History list shows with the last one rewards in the incorrect order.
+**Scenario 4:** Claimed reward with wrong logging  
+**Given** the user is in the page where can claim a reward  
+**And** the user is not logged  
+**When** the user claim a reward  
+**Then** The user can see the login page  
+**And** insert an incorrect user/password  
+**And** the user can see the login page error  
 
-6. Claim rewards and the user has 8 rewards. (Sucess case)
-6.1 Logged in the page with correct user/password
-6.2 Click on claim rewards
-6.3 Claim the reward.
-6.4 Show the history list with 8 rewards and the last one on the list.
+**Scenario 5:** Claimed reward failed not to get the new reward  
+**Given** the user previously logged with the correct 'user' 'password'  
+**And** the user is on the page where can get a reward  
+**When** the user claims a reward  
+**Then** Some internal error happened and show error message in the page  
+**And** Claim the reward again  
+**And** Show the history section without your reward in the list  
 
-7. Claim the same reward more than one time with less than 8 rewards (Sucess case)
-7.1 Logged in the page with correct user/password
-7.2 Click on claim rewards
-7.3 Claim the reward.
-7.4 Show the history list with the last reward twice in chronological order.
+**Scenario 6:** Claimed reward and the user has 8 rewards  
+**Given** the user previously logged with the correct 'user' 'password'  
+**And** the user is on the page where can get a reward  
+**When** the user claims a reward  
+**Then** the user sees the history list with 8 rewards and the last one on the list  
+
+**Scenario 7:** Claimed the same reward more than one time with less than 8 rewards  
+**Given** the user previously logged with the correct 'user' 'password'  
+**And** the user is on the page where can get a reward  
+**When** the user claims a reward  
+**Then** the user can see the history list with the last reward twice in chronological order  
 
 # BACK-END
 
