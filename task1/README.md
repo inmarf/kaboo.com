@@ -59,24 +59,22 @@
 
 I don't know with kind of API is, but in case there is an online API.
 
-1. Call de reward history with a valid username.
-1.1. Call the API: igc/betspin/rewards/history <valid_user>
-1.2 Response:
-- Status Code: 200
-- Content-Type: application/json
-- Valid reward history response. 
+**Scenario 1:** Call the reward history with a valid username
+**When**  API call to  igc/betspin/rewards/history is made with 'user' with value 'validUser'
+**Then** request status Code should be 200
+**And** request Content-Type should be application/json
+**And** Valid reward history response
 
-2. Call de reward history with a valid username.
-2.1. Call the API: igc/betspin/rewards/history <incorrect_user>
-2.2 Response:
-- Status Code: 404
+**Scenario 2:** Call the reward history with no valid username
+**When**  API call to  igc/betspin/rewards/history is made with 'user' with value 'incorrectUser'
+**Then** request status Code should be 404
 
-3. Call de reward history with a valid username.
-3.1. Call the API: igc/betspin/rewards/history <valid_user>
-3.2 Response:
-- Status Code: 200
-- Content-Type: application/json
-- Valid reward history response. The response not contains duplicated items in the list and the re-claimed should contain a list.
+**Sceneario 3:** Call de reward history with a valid username  
+**When**  API call to  igc/betspin/rewards/history is made with 'user' with value 'validUser'  
+**Then** request status Code should be 200  
+**And** request Content-Type should be application/json  
+**And** Valid reward history response  
+**And** The response not contains duplicated items in the list and the re-claimed shoul contain a list  
 
 # Things not covered
 
