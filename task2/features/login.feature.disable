@@ -1,0 +1,7 @@
+Feature: Login into the application use cases
+
+Scenario: Check that the Kaboo login is working properly (user registered or use autouk / Autotest1 )
+ Given user is on /login page
+ When fills username/password
+ And clicks Log in button
+ Then user should be redirected to account page /profile
