@@ -1,5 +1,12 @@
 # FRONT-END
-
+```
+As a user I want to see my reward history (the ones I have obtained and claimed) in the Freebies Vault Section
+the functionality would be:
+  
+  - When user claims a reward (token) the "Your history" section will be displayed
+  - Each token will display 1 characteristic thumbnail 
+  - Only the last 8 tokens will be displayed
+```
 **Feature:** Claim reward  
   As a user  
   I want to claim a reward  
@@ -57,6 +64,14 @@
 
 # BACK-END
 
+```
+a) By using the method `/igc/betspin/rewards/history` with only 1 param `userName`, 
+   we will get a JSON with an array of unique tokens claimed by that user.
+b) Each unique token claimed could have been claimed more than once (sub-array objects)
+c) The following info will be contained for each sub-array object: game-slug,date 
+   claimed, info, reason, expiry date.
+d) The response will be in chronological order in the array and sub-array.
+```
 I don't know with kind of API is, but in case there is an online API.
 
 **Scenario 1:** Call the reward history with a valid username
