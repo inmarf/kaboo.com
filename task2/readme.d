@@ -18,6 +18,7 @@ Scenario: 2-Check that the Kaboo login is working properly (user registered or u
  Then user should be redirected to account page /profile
 
 # Results
+ open config/config.js and replace in line baseUrl: 'http://username:password@qatest.staging.kaboo.com', replace username and password by the correct values
 In one terminal
 webdriver-manager start
 
