@@ -1,4 +1,4 @@
-```
+
 In the second and BONUS task you are required to implement an end2end automated test case using the techonologies, url and accounts mentioned above so that the following BDD (Behaviour driven development) Scenario is checked against the url. Note that the purpose of this test is to:
 a) Demonstrate your ability to understand Page Object model and take advantage on the E2E testing
 b) Build automated tests, given some specs and adapting the Page Object accordingly so that bugs can be flagged
@@ -16,7 +16,7 @@ Scenario: 2-Check that the Kaboo login is working properly (user registered or u
  When fills username/password
  And clicks Log in button
  Then user should be redirected to account page /profile
-```
+
 # Results
 In one terminal
 webdriver-manager start
