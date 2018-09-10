@@ -45,4 +45,4 @@ Driver info: driver.version: unknown
 npm ERR! Test failed.  See above for more details.
 
 I'm running the test in a Debian Chrome.
-I've investigated and tried some different things but not runnin. 
+I've investigated and tried some different things but not running. 
