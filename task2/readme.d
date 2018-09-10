@@ -23,7 +23,7 @@ Scenario: 2-Check that the Kaboo login is working properly (user registered or u
  When fills username/password
  And clicks Log in button
  Then user should be redirected to account page /profile
-
+ 
 # Results
 In one terminal
 webdriver-manager start
